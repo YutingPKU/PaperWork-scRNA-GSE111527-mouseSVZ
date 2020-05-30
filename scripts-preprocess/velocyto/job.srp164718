@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH -J vel164718
+#SBATCH -p cn-short
+#SBATCH -N 1 
+#SBATCH -o vel164718_%j.out
+#SBATCH -e vel164718_%j.err
+#SBATCH --no-requeue
+#SBATCH -A lch3000_g1
+#SBATCH --qos=lch3000cns
+#SBATCH -c 20
+pkurun  velocyto run -b an008.filtered.cellbarcode.tsv -o ../velocyto/bamfiles/ -m mm10_rmsk.gtf -@ 20 ../velocyto/bamfiles/SRR6814856.bam gencode.vM25.chr_patch_hapl_scaff.annotation.gtf

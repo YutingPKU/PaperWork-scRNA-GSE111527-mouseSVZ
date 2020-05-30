@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH -J sam124641
+#SBATCH -p cn-long
+#SBATCH -N 1 
+#SBATCH -o sam124641_%j.out
+#SBATCH -e sam124641_%j.err
+#SBATCH --no-requeue
+#SBATCH -A lch3000_g1
+#SBATCH --qos=lch3000cnl
+#SBATCH -c 20
+pkurun  samtools sort -@ 20 -o /lustre1/lch3000_pkuhpc/liuyt/SP/public/GSE111527-humanSVZ/velocyto/bamfiles/cellsorted_SRR6814856.bam /lustre1/lch3000_pkuhpc/liuyt/SP/public/GSE111527-humanSVZ/velocyto/bamfiles/SRR6814856.bam

@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH -J bas151155
+#SBATCH -p cn-long
+#SBATCH -N 1 
+#SBATCH -o bas151155_%j.out
+#SBATCH -e bas151155_%j.err
+#SBATCH --no-requeue
+#SBATCH -A lch3000_g1
+#SBATCH --qos=lch3000cnl
+#SBATCH -c 20
+pkurun  bash DGE.sh
